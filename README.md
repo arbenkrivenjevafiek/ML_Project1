@@ -230,3 +230,30 @@ Grafiku paraqet shpërndarjen e sasive, çmimeve dhe vlerave për kategorinë �
 
 <img src="img/Skewness.png" alt="Skewness_Data"/>
 
+## Gjenerimi i të dhënave sintetike me shpërndarje normale dhe identifikimi i outliers
+
+### Hapat e ndjekura:
+
+1. **Gjenerimi i të dhënave sintetike** me shpërndarje normale dhe shtimi i disa outliers.
+2. Llogaritja e statistikave kryesore:
+   - **Mesatarja (Mean)**
+   - **Mediana (Median)**
+   - **Devijimi Standard (Standard Deviation, Std)**
+3. **Identifikimi i outliers** duke përdorur **Z-score > 3**.
+4. **Shfaqja e outliers** në output (print).
+5. **Vizualizimi grafik**:
+   - **Histogram me KDE (Density Curve)**, ku do të paraqiten:
+     - Mesatarja
+     - Mediana
+     - Vijat për Z-score (pragu ±3 devijime standarde)
+   - **Violin plot**, që tregon shpërndarjen dhe outliers në mënyrë më të qartë.
+
+<img src="img/z-score.png" alt="Z_socre"/>
+
+<img src="img/z-score2.png" alt="Z_socre2"/>
+
+### Shfaqja e grafikut pas largimit te olutlaiers:
+
+<img src="img/z-score_clean.png" alt="Z_socre"/>
+
+<img src="img/z-score_clean2.png" alt="Z_socre2"/>
