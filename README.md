@@ -54,5 +54,21 @@ Duhet theksuar se këto të dhëna nuk përmbajnë asnjë informacion të ndjesh
 - Ndarja e të dhënave sipas niveleve
 
 **Faza II - Trajnimi i modelit:**
+- Para-procesimi i të Dhënave: Sigurimi që veçoritë janë të përshtatshme për modelin e Machine Learning, përfshirë kodimin e variablave kategorikë dhe shkallëzimin e të dhënave numerike.
+- Trajnimi i Modelit: Përdorimi i një algoritmi të përshtatshëm për klasifikimin dhe parashikimin e shpenzueshmërisë së barnave, duke marrë parasysh buxhetin, numrin e reparteve/klinikave dhe llojet e barnave.
+- Vlerësimi i Modelit: Matja e saktësisë dhe efektivitetit të modelit me metrika të përshtatshme për parashikimin e shpenzueshmërisë së barnave.
 
 **Faza III - Analiza dhe evaluimi (ri-trajnimi) dhe aplikimi i veglave të ML:**
+- Rregullimi i Hiperparametrave: Eksperimentimi me parametra të ndryshëm për të optimizuar performancën e metodave të analitikës së të dhënave, duke siguruar klasifikime dhe parashikime më të sakta.
+- Ritrajnimi i Modeleve: Përdorimi i konfigurimeve optimale për të përmirësuar rezultatet në:
+   - Klasterizimin (K-Means) për të grupuar spitalet sipas modeleve të ngjashme të shpenzueshmërisë së barnave.
+   - Analizën e Asocimit (Apriori, FP-Growth) për të zbuluar modelet e përdorimit të barnave dhe mungesat në spitale të ndryshme.
+   - Klasifikimin (Random Forest, Decision Trees) për të parashikuar përdorimin e barnave në spitale bazuar në faktorë të ndryshëm.
+   - Regresionin (Linear, Ridge, Lasso) për të modeluar dhe parashikuar shpenzimet për barna të ndryshme.
+- Krahasimi i Performancës: Matja dhe krahasimi i efektivitetit të metodave të ndryshme duke përdorur metrika për saktësinë e grupeve (clustering), rregullsinë e rregullave të asocimit, saktësinë dhe kujtesën për klasifikim, si dhe gabimet e parashikimit për regresion.
+- Vizualizimi i Rezultateve: Krijimi i grafikëve për të analizuar më mirë modelet e shpenzueshmërisë së barnave dhe ndikimin e parametrave në rezultatet e metodave të përdorura.
+- Analiza e Parametrave: Krahasimi i konfigurimeve më të mira dhe më të këqija për secilën metodë, duke vlerësuar ndikimin e hiperparametrave në performancën e analizës dhe parashikimeve.
+
+## ** Faza I - Analiza Eksploruese e të Dhënave**
+
+**Madhësia e dataset** 
