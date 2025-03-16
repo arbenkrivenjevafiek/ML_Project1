@@ -130,6 +130,18 @@ Atributet në vijim janë larguar nga dataset-i, pasi nuk kishim ndonjë interes
 2. Shenim
 3. RrugaMarrjes
 
+Në vazhdim paraqesim kolonat që kanë mbetur pas largimit të kolonave të panevojshme dhe pas renditjes së tyre: 
+1. Spitali
+2. NjesiaReparti
+3. LlojiHyrjes
+4. OperatoriEkonomik
+5. DataRegjistrimit
+6. Artikulli
+7. ArtikulliLloji
+8. Sasia
+9. Cmimi
+10. Vlera
+
 ### Vizualizimi
 
 **Cilesia e të dhënave**
@@ -137,3 +149,57 @@ Atributet në vijim janë larguar nga dataset-i, pasi nuk kishim ndonjë interes
 Në tabelën e mëposhtme kemi paraqitur cilësinë e të dhënave për të gjitha kolonat e dataset-it, duke treguar vlerat me gabime, vlerat unike, vlerat e duplikuara, mesataren, medianën, devijimin standard, vlerën minimale dhe vlerën maksimale.
 
 <img src="img/Cilesia_E_Te_Dhenave.png" alt="Cilesia_E_Te_Dhenave"/>
+
+**Matrica e korelacionit**
+
+Matrica e korelacionit tregon lidhjen midis Sasisë, Çmimit dhe Vlerës. Çmimi dhe Vlera kanë një korelacion të moderuar (0.58), që tregon se çmimi ndikon më shumë në vlerën totale sesa sasia. Ndërkohë, Sasia dhe Çmimi nuk kanë ndonjë lidhje domethënëse (-0.0017), duke sugjeruar që ndryshimet në çmim nuk ndikojnë drejtpërdrejt në sasinë e produkteve të përdorura.
+
+<img src="img/Matrica_Korelacionit.png" alt="Matrica_Korelacionit"/>
+
+**Shpenzueshmeria e barnave sipas muajve**
+
+Grafiku tregon një shpërndarje të qëndrueshme të shpenzueshmërisë mujore të barnave, me luhatje midis 3500 dhe 5000 rasteve. Kulmet ndodhin në korrik dhe tetor, ndërsa janari shënon vlerën më të ulët. Luhatjet e vogla në qershor dhe shtator mund të lidhen me faktorë sezonalë. Në përgjithësi, shpenzimet mbeten relativisht të balancuara gjatë vitit.
+
+<img src="img/Shpenzueshmeria_Sipas_Muajve.png" alt="Shpenzueshmeria_Sipas_Muajve"/>
+
+**Shpenzueshmeria e barnave sipas burimit të financimit**
+
+Grafiku tregon se granti qeveritar është burimi kryesor i financimit, duke tejkaluar 35 milionë, ndjekur nga donacionet me rreth 12 milionë. Hyrjet vetanake dhe pagesat me para të gatshme përfaqësojnë një pjesë shumë të vogël të totalit.
+
+<img src="img/Shperndarja_Sipas_Burimit_Financimit.png" alt="Shperndarja_Sipas_Burimit_Financimit"/>
+
+**Shpenzueshmeria e barnave sipas operatoreve**
+
+Grafiku paraqet shpërndarjen e vlerës totale sipas operatorëve ekonomikë, duke treguar se disa operatorë kanë një dominim të lartë në shpenzime. Disa prej tyre kanë vlera shumë të larta, ndërsa shumica kanë një ndikim më të vogël. Operatorët me vlera ekstreme mund të përfaqësojnë furnitorët kryesorë të barnave dhe materialeve mjekësore.
+
+<img src="img/Shperndarja_Sipas_Operatoreve.png" alt="Shperndarja_Sipas_Operatoreve"/>
+
+**Shpenzueshmeria e barnave sipas llojeve te produkteve**
+
+Grafiku tregon shpërndarjen e shpenzimeve totale sipas llojit të artikullit, ku barnat zënë pjesën më të madhe të vlerës, duke tejkaluar 35 milionë. Citostatikët përfaqësojnë shpenzime dukshëm më të ulëta, ndërsa reagentët kanë ndikimin më të vogël. Kjo sugjeron se shumica e financimeve shkojnë për barnat, të ndjekura nga trajtimet onkologjike dhe analizat laboratorike.
+
+<img src="img/Shperndarja_Sipas_Llojit_Produktit.png" alt="Shperndarja_Sipas_Llojit_Produktit"/>
+
+**Shpenzueshmeria e barnave sipas spitaleve**
+
+Grafiku tregon shpërndarjen e shpenzimeve totale sipas spitaleve, ku Spitali 1 ka një dominim të theksuar, duke kaluar 40 milionë, ndërsa të tjerët kanë shpenzime më të vogla.
+
+<img src="img/Shperndarja_Sipas_Spitalit.png" alt="Shperndarja_Sipas_Spitalit"/>
+
+**Shpenzueshmeria e barnave sipas Klinikave/Reparteve**
+
+Grafiku tregon shpërndarjen e shpenzimeve totale sipas njësive/reparteve spitalore, ku Onkologjia, Infektivi dhe Pediatria kanë shpenzimet më të larta. Repartet e tjera kanë vlera shumë më të ulëta, duke treguar një fokus të madh të financimeve në trajtimet për kancer, sëmundjet infektive dhe kujdesin pediatrik.
+
+<img src="img/Shperndarja_Sipas_KlinikaReparti.png" alt="Shperndarja_Sipas_KlinikaReparti"/>
+
+**Vizualizimi i Smote_Algoritem**
+
+Grafiku paraqet shpërndarjen e klasave përpara dhe pas përdorimit të SMOTE për balancimin e të dhënave. Para SMOTE, shumica e vlerave ishin të përqendruara në intervalin 0-1, duke krijuar një shpërndarje të pabalancuar. Pas SMOTE, klasat janë bërë më uniforme, duke përmirësuar ekuilibrin dhe duke ndihmuar modelin të mësojë më mirë nga të gjitha kategoritë.
+
+<img src="img/Smote_Algoritem.png" alt="Smote_Algoritem"/>
+
+### Outliers
+
+Grafiku tregon shpërndarjen e Sasisë, Çmimit dhe Vlerës, duke identifikuar outliers (vlera jashtëzakonisht të larta) në të gjitha kategoritë. Sasia ka disa vlera ekstreme mbi 100,000, ndërsa çmimi dhe vlera gjithashtu kanë disa raste me shuma shumë të larta.
+
+<img src="img/Boxplot_Per_Outlier.png" alt="Boxplot_Per_Outlier"/>
