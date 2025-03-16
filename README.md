@@ -71,4 +71,69 @@ Duhet theksuar se këto të dhëna nuk përmbajnë asnjë informacion të ndjesh
 
 ## ** Faza I - Analiza Eksploruese e të Dhënave**
 
-**Madhësia e dataset** 
+**Madhësia e dataset** Të dhënat përmbajnë 54,161 rreshta dhe 13 kolona.
+
+**Kolonat**: Dataset përmban kolonat: Spitali, NjesiaReparti, Numri, Shenim, DataRegjistrimit, Artikulli, ArtikulliLloji, RrugaMarrjes, Sasia, Cmimi, Vlera, OperatoriEkonomik, LlojiHyrjes
+
+ **Tipet e të dhënave**: Atributet që përmbajnë tekst (Spitali, NjesiaReparti, Numri, Shenim, DataRegjistrimit, Artikulli, ArtikulliLloji, RrugaMarrjes, OperatoriEkonomik, LlojiHyrjes) janë në formatin e tipit object, ndërsa atributet që përmbajnë numra (Sasia, Cmimi, Vlera) janë në formatin e tipit float.
+
+ **Kuptimi i të gjitha kolonave Para-procesimit**
+ 1. **Spitali**: Spitali i cili i takon nivelit dytësor ose terciar
+ 2. **Klinika/Repart**: Klinikë ose repart, në varësi të organizimit që ka spitali
+ 3. **Numri**: Numër rendor i transaksionit sipas njësisë organizative të spitalit
+ 4. **Shenim**: Një shënim ose koment për atë transaksion
+ 5. **DataRegjistrimit**: Data e regjistrimit të transaksionit
+ 6. **Artikulli**: Emërtimi i produktit, i cili është produkt gjenerik dhe përmban detajet e tij
+ 7. **ArtikulliLloji**: Lloji i produktit ndahet në tri kategori: barna, citostatikë dhe reagentë
+ 8. **RrugaMarrjes**: Rruga e marrjes është mënyra e përdorimit të produktit farmaceutik nga pacienti
+ 9. **Sasia**: Sasia e produkteve e shprehur në doza
+ 10. **Cmimi**: Çmimi i produktit, i cili përfaqëson çmimin njësi për dozë
+ 11. **Vlera**: Vlera e produktit si rezultat i shumëzimit të sasisë me çmimin
+ 12. **OperatoriEkonomik**:Ruhen të dhënat për operatorin ekonomik
+ 10. **LlojiHyrjes**: Lloji i hyrjes së produktit, që përfaqëson burimin e financimit të produktit
+
+## **Para-procesimi**
+
+**Formati fillestar i fajllit**
+
+Fajlli fillestar është në format '.xlsx', i cili, para ngarkimit në projekt, konvertohet në një fajll '.csv'.
+
+Atributet që përmbajnë tekst (Spitali, NjesiaReparti, Numri, Shenim, DataRegjistrimit, Artikulli, ArtikulliLloji, RrugaMarrjes, OperatoriEkonomik, LlojiHyrjes) janë në formatin e tipit object, ndërsa atributet që përmbajnë numra (Sasia, Cmimi, Vlera) janë në formatin e tipit float.
+
+**Vlera me gabime NULL**
+- *Artikulli* ka një rresht me vlerë të munguar (NULL)
+  - Trajtimi: Ky rresht është fshirë, pasi përveç artikullit, edhe kolonat e tjera si Sasia, Çmimi dhe Vlera kishin vlera (NULL).
+- *Sasia* ka 33 rreshta me vlerë të munguar (NULL)
+  - Trajtimi: Këto rreshta janë fshirë, pasi, përveç sasisë, edhe kolonat e tjera si Çmimi dhe Vlera kishin vlera të mungueshme (NULL)
+- *Cmimi* ka 33 rreshta me vlerë të munguar (NULL)
+  - Trajtimi: Këto rreshta janë fshirë, pasi, përveç çmimit, edhe kolonat e tjera si Sasia dhe Vlera kishin vlera të mungueshme (NULL)
+- *Vlera* ka 30 rreshta me vlerë të munguar (NULL)
+  - Trajtimi: Këto rreshta janë fshirë, pasi, përveç vlerës, edhe kolonat e tjera si Sasia dhe Çmimi kishin vlera të mungueshme (NULL)
+
+Pra, të gjitha këto kolona me vlera të mungueshme (NULL) kanë qenë njëkohësisht në të njëjtët rreshta. Si rezultat, kemi fshirë gjithsej 33 rreshta për kolonat Artikulli, Sasia, Çmimi dhe Vlera.
+
+### **Para-procesimi i atributeve**
+
+**DataRegjistrimit**
+
+Në kolonën Data e Regjistrimit, formati i datave është rregulluar duke u standardizuar në formatin "yyyy-mm-dd".
+
+**Kolonat Sasia, Cmimi, Vlera**
+
+Për kolonat Sasia, Çmimi dhe Vlera, është formatuar që të shfaqen me dy shifra pas pikës dhjetore.
+
+### **Reduktimi i dimensioneve**
+
+Atributet në vijim janë larguar nga dataset-i, pasi nuk kishim ndonjë interes për t'i përdorur më vonë:
+
+1. Numri
+2. Shenim
+3. RrugaMarrjes
+
+### Vizualizimi
+
+**Cilesia e të dhënave**
+
+Në tabelën e mëposhtme kemi paraqitur cilësinë e të dhënave për të gjitha kolonat e dataset-it, duke treguar vlerat me gabime, vlerat unike, vlerat e duplikuara, mesataren, medianën, devijimin standard, vlerën minimale dhe vlerën maksimale.
+
+<img src="img/Cilesia_E_Te_Dhenave.png" alt="Cilesia_E_Te_Dhenave"/>
