@@ -18,7 +18,7 @@ Machine Learning
 
 **Mësimdhënësit e lëndës:**
 
-| Emri                   | Roli          | Fakulteti                                      |
+| Emri                   | Roli          | Fakulteti                                           |
 |------------------------|---------------|-----------------------------------------------------|
 | Prof. Dr. Lule AHMEDI  | Professor     | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
 | Dr. Sc. Mërgim H. HOTI | Asistent      | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
@@ -27,9 +27,9 @@ Machine Learning
 
 | Emri             | Roli             | Fakulteti                                           |
 |----------------  |------------------|-----------------------------------------------------|
-| Arben Krivenjeva | Master's Student | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
-| Muhamet Burrniku | Master's Student | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
-| Bledian Potera   | Master's Student | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
+| Arben Krivenjeva | Master Student   | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
+| Muhamet Burrniku | Student          | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
+| Bledian Potera   | Student          | Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike |
 
 Ky projekt po realizohet në Universitetin e Prishtinës, specifikisht në Fakultetin e Inxhinierisë Elektrike dhe Kompjuterike, si pjesë e programit të studimeve të nivelit Master, në semestrin e dytë, në vitin akademik 2024/2025.
 
@@ -48,7 +48,7 @@ Duhet theksuar se këto të dhëna nuk përmbajnë asnjë informacion të ndjesh
    - Pastrimi i të dhënave
    - Tipet e të dhënave
    - Reduktimi i Dimensionalitetit
-   - Standartizimi, normalizimi, diskretizimi dhe binarizimi, 
+   - Standartizimi, diskretizimi dhe binarizimi, 
    - Vizualizimi
    - Gjetja dhe fshirja e Outliers
 - Ndarja e të dhënave sipas niveleve
@@ -141,6 +141,26 @@ Në vazhdim paraqesim kolonat që kanë mbetur pas largimit të kolonave të pan
 8. Sasia
 9. Cmimi
 10. Vlera
+
+### Standartizimi, diskretizimi dhe binarizimi
+
+**Standartizimi**
+
+Standartizimi është aplikuar për kolonat Sasia, Çmimi dhe Vlera, duke reduktuar përhapjen e të dhënave dhe duke i sjellë ato në një shkallë të krahasueshme. Të dhënat fillestare përmbanin vlera të ndryshme ekstreme (max: 101,800 për Sasia dhe 979,616 për Çmimin), ndërsa pas normalizimit janë sjellë në një formë më të balancuar.
+
+<img src="img/Standartizimi.png" alt="Standartizimi"/>
+
+**Diskretizimi**
+
+Diskretizimi është zbatuar për Sasia, Çmimin dhe Vlerën, duke i ndarë ato në kategori të dallueshme si "E vogël", "Mesatare", "E ulët" etj. Ky proces ndihmon në thjeshtimin e të dhënave duke grupuar vlerat numerike në intervale, duke e bërë analizën më të kuptueshme.
+
+<img src="img/Diskretizimi.png" alt="Diskretizimi"/>
+
+**Binarizimi**
+
+Binarizimi është zbatuar duke përdorur mesataren e kolonës "Vlera" si prag ndarës, ku vlerat më të mëdha se mesatarja kategorizohen si 1, ndërsa ato më të vogla si 0. Ky proces ndihmon në thjeshtimin e analizës dhe përmirësimin e performancës së modeleve klasifikuese. Kjo metodë është veçanërisht e dobishme për dallimin e vlerave të larta dhe të ulëta në mënyrë të strukturuar.
+
+<img src="img/Binarizimi.png" alt="Binarizimi"/>
 
 ### Vizualizimi
 
