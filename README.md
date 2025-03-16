@@ -203,3 +203,10 @@ Grafiku paraqet shpërndarjen e klasave përpara dhe pas përdorimit të SMOTE p
 Grafiku tregon shpërndarjen e Sasisë, Çmimit dhe Vlerës, duke identifikuar outliers (vlera jashtëzakonisht të larta) në të gjitha kategoritë. Sasia ka disa vlera ekstreme mbi 100,000, ndërsa çmimi dhe vlera gjithashtu kanë disa raste me shuma shumë të larta.
 
 <img src="img/Boxplot_Per_Outlier.png" alt="Boxplot_Per_Outlier"/>
+
+### Skewness Data
+
+Grafiku paraqet shpërndarjen e sasive, çmimeve dhe vlerave për kategorinë “Barna”. Të dhënat tregojnë një shpërndarje shumë të anuar djathtas (skewness shumë të lartë), duke treguar se shumica e vlerave janë të vogla, ndërsa disa raste kanë vlera jashtëzakonisht të larta. Kjo tregon praninë e outliers ose vlerave ekstreme, veçanërisht te çmimi (Cmimi) dhe vlera totale (Vlera)
+
+<img src="img/Skewness.png" alt="Skewness_Data"/>
+
